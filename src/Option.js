@@ -1,6 +1,9 @@
 import React from 'react'
+import { useQuizContext } from './contexts/QuizContext';
 
-export default function Option({ question, dispatch, answer }) {
+export default function Option({ question }) {
+  const {answer, dispatch} = useQuizContext();
+
   const answered = answer !== null;
 
   return (
